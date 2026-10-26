@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huquq Quiz - Ulug'bek.R</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<!-- BOSHLASH OYNASI -->
+
+<div class="container" id="startScreen">
+
+    <h1>⚖️ Huquq Quiz</h1>
+
+    <p class="subtitle">
+        10-sinf Huquq fani
+        <br>
+        "Inson huquqlarini himoya qiluvchi organlar"
+    </p>
+
+
+    <input 
+        type="text"
+        id="fullname"
+        placeholder="Ism va familiyangizni kiriting"
+    >
+
+
+    <h3>🎮 Rejim tanlang</h3>
+
+
+    <div class="modes">
+
+
+        <button class="modeBtn easy" data-mode="easy">
+
+            🟢 Oddiy rejim
+            <br>
+            <small>
+                20 savol | 10 daqiqa | 1 ball
+            </small>
+
+        </button>
+
+
+
+        <button class="modeBtn hard" data-mode="hard">
+
+            🟡 Qiyin rejim
+            <br>
+            <small>
+                20 savol | 7 daqiqa | 2 ball
+            </small>
+
+        </button>
+
+
+
+        <button class="modeBtn expert" data-mode="expert">
+
+            🔴 Olimpiada rejimi
+            <br>
+            <small>
+                20 savol | 5 daqiqa | 3 ball
+            </small>
+
+        </button>
+
+
+    </div>
+
+
+
+    <button id="startBtn">
+
+        🎮 O'yinni boshlash
+
+    </button>
+
+
+</div>
+
+
+
+
+<!-- TEST OYNASI -->
+
+<div class="container hidden" id="quizScreen">
+
+
+    <div class="topBar">
+
+
+        <div class="player">
+
+            👤 <span id="playerName"></span>
+
+        </div>
+
+
+        <div class="modeShow">
+
+            🎯 <span id="modeName"></span>
+
+        </div>
+
+
+        <div class="timer">
+
+            ⏰ <span id="time">10:00</span>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="progress">
+
+
+        <div class="progressText">
+
+            Savol:
+
+            <span id="currentQuestion">
+                1
+            </span>
+
+            /
+
+            <span id="totalQuestion">
+                20
+            </span>
+
+        </div>
+
+
+        <div class="progressBar">
+
+            <div id="progressFill"></div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="questionBox">
+
+
+        <h2 id="question">
+
+            Savol
+
+        </h2>
+
+
+    </div>
+
+
+
+
+
+    <div class="answers">
+
+
+        <button class="answerBtn"></button>
+
+        <button class="answerBtn"></button>
+
+        <button class="answerBtn"></button>
+
+        <button class="answerBtn"></button>
+
+
+    </div>
+
+
+
+
+
+    <div class="buttons">
+
+
+        <button id="prevBtn">
+
+            ⬅ Oldingi
+
+        </button>
+
+
+
+        <button id="nextBtn">
+
+            Keyingi ➡
+
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- NATIJA OYNASI -->
+
+
+<div class="container hidden" id="resultScreen">
+
+
+    <h1>
+        🏆 Natija
+    </h1>
+
+
+
+    <h2 id="resultName"></h2>
+
+
+    <p>
+        Rejim:
+    </p>
+
+    <h3 id="resultMode"></h3>
+
+
+
+    <p>
+        Ball:
+    </p>
+
+    <h2 id="score"></h2>
+
+
+
+    <p>
+        Foiz:
+    </p>
+
+    <h2 id="percent"></h2>
+
+
+
+    <p>
+        Baho:
+    </p>
+
+    <h2 id="grade"></h2>
+
+
+
+    <button id="restartBtn">
+
+        🔄 Qayta o'ynash
+
+    </button>
+
+
+</div>
+
+
+
+
+
+<footer>
+
+    Ishlab chiqaruvchi:
+    <strong>Ulug'bek.R</strong>
+
+</footer>
+
+
+
+
+
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
